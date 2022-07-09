@@ -103,6 +103,16 @@ DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("plugin", "git-junit");
 ```
 
+### Override device mode
+To override device mode, the following code can be used
+```java
+DevTools devTools = ((HasDevTools) driver).getDevTools();
+devTools.createSession();
+
+devTools.send(Emulation.setDeviceMetricsOverride(414, 736, 50, true, Optional.empty(), Optional.empty(),
+   Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(), Optional.empty(),
+   Option
+```
 ### Executing the Test
 
 **Step 4:** The tests can be executed in the terminal using the following command.
